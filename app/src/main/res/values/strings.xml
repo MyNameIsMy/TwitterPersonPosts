@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TwitterPersonPosts</string>
+    <string name="delete_data">Delete data</string>
+    <string name="safe_data">Safe data</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">bcJ0eB2gZm4UMwG04UkxqxS8W</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">HgbhkfTpOsyxbCMSErQkFbZ2sPghQohaioy2Rn8kW5iVQj24WL</string>
+    <string name="action_settings">Settings</string>
+    <string name="type_nickname">Type user nickname</string>
+    <string name="find">Find</string>
+    <string name="title_activity_login">LoginActivity</string>
+</resources>
