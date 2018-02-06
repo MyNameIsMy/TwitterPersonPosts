@@ -1,6 +1,5 @@
 package projects.suchushin.org.twitterpersonposts;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -36,7 +35,6 @@ public class ScrollingActivity extends AppCompatActivity {
     ScrollView scrollView;
     Realm realm;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +59,7 @@ public class ScrollingActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.button)
-    public void FindTimeline(){
+    public void createTimeline(){
         if (scrollView != null){
             ((ViewManager)scrollView.getParent()).removeView(scrollView);
             scrollView = null;
@@ -83,7 +81,7 @@ public class ScrollingActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.delete_data)
-    public void DeleteData(){
+    public void deleteData(){
         if (scrollView != null){
             ((ViewManager)scrollView.getParent()).removeView(scrollView);
             scrollView = null;
@@ -94,7 +92,7 @@ public class ScrollingActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.safe_data)
-    public void SafeData(){
+    public void safeData(){
         realm.beginTransaction();
         realm.deleteAll();
         realm.commitTransaction();

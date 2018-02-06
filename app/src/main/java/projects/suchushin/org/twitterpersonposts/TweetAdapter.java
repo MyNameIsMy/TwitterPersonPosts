@@ -3,8 +3,6 @@ package projects.suchushin.org.twitterpersonposts;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,6 @@ import com.twitter.sdk.android.tweetui.CompactTweetView;
 import com.twitter.sdk.android.tweetui.Timeline;
 import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TweetAdapter extends TweetTimelineListAdapter{
@@ -25,15 +22,11 @@ public class TweetAdapter extends TweetTimelineListAdapter{
 
     public TweetAdapter(Context context, Timeline<Tweet> timeline) {
         super(context, timeline);
-        tweets = new ArrayList<>();
     }
     
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Tweet tweet = getItem(position);
-        if (tweets != null){
-            tweets.add(tweet);
-        }
         return getView(tweet, context);
     }
 
@@ -73,9 +66,5 @@ public class TweetAdapter extends TweetTimelineListAdapter{
         linearLayout.addView(ln);
 
         return linearLayout;
-    }
-
-    List<Tweet> getTweets(){
-        return tweets;
     }
 }
